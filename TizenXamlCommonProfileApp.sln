@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TizenXamlCommonProfileApp", "TizenXamlCommonProfileApp\TizenXamlCommonProfileApp\TizenXamlCommonProfileApp.csproj", "{C821A0FA-29D6-4C51-A397-C4B4B2F74FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TizenXamlCommonProfileApp.Tizen", "TizenXamlCommonProfileApp\TizenXamlCommonProfileApp.Tizen\TizenXamlCommonProfileApp.Tizen.csproj", "{3C2156E2-FC62-42CD-BE5C-328461936B7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C821A0FA-29D6-4C51-A397-C4B4B2F74FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C821A0FA-29D6-4C51-A397-C4B4B2F74FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C821A0FA-29D6-4C51-A397-C4B4B2F74FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C821A0FA-29D6-4C51-A397-C4B4B2F74FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C2156E2-FC62-42CD-BE5C-328461936B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2156E2-FC62-42CD-BE5C-328461936B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2156E2-FC62-42CD-BE5C-328461936B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2156E2-FC62-42CD-BE5C-328461936B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D523C7B-1919-483E-A9CE-1855286D6B92}
+	EndGlobalSection
+EndGlobal

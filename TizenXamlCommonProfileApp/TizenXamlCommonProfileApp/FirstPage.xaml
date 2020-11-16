@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TizenXamlCommonProfileApp.FirstPage">
+    <NavigationPage.TitleView>
+        <Label Text="FirstPage"
+               TextColor="#fff"
+               FontAttributes="Bold"
+               HorizontalOptions="End"
+               Margin="0,0,20,0" />
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Gray" Margin="20">
+        <Label Text="First Page"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="Blue"
+               Padding="20"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="30" />
+            <StackLayout Orientation="Horizontal" Margin="10">
+               <Button x:Name="btnBack"
+                        Text="Back page"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="Black"
+                        Clicked="btn_Clicked" />
+
+               <Button x:Name="btnNext"
+                        Text="Next page"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btn_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

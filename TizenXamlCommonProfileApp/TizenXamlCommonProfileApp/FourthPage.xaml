@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TizenXamlCommonProfileApp.FourthPage">
+    <NavigationPage.TitleView>
+        <Label Text="FourthPage"
+               TextColor="#fff"
+               FontAttributes="Bold"
+               HorizontalOptions="End"
+               Margin="0,0,20,0" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="View">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BackgroundColor" Value="Lime" />
+            </Style>
+            <Style x:Key="greenSearchBarStyle" TargetType="SearchBar"
+                   BasedOn="{StaticResource baseStyle}" >
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="PlaceholderColor" Value="Green" />
+                <Setter Property="FontSize" Value="40" />
+                <Setter Property="BackgroundColor" Value="Yellow" />
+            </Style>
+            <Style x:Key="blueSearchBarStyle" TargetType="SearchBar"
+                   BasedOn="{StaticResource baseStyle}" >
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="PlaceholderColor" Value="Blue" />
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="BackgroundColor" Value="YellowGreen" />
+            </Style>
+            <Style x:Key="redSearchBarStyle" TargetType="SearchBar"
+                   BasedOn="{StaticResource baseStyle}" >
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="PlaceholderColor" Value="Red" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="SearchBar"
+                   BasedOn="{StaticResource baseStyle}" >
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="BackgroundColor" Value="LightSkyBlue" />
+            </Style>
+                   
+        </ResourceDictionary>    
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Gray" Margin="20">
+            <Label Text="Style"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="Blue"
+               Padding="20"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="30" />
+
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Button x:Name="btnBack"
+                        Text="Back page"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="Black"
+                        Clicked="btn_Clicked" />
+
+                <Button x:Name="btnNext"
+                        Text="Next page"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btn_Clicked" />
+            </StackLayout>
+
+            <StackLayout Padding="0,100,0,0" Margin="0,100,0,0" >
+                <SearchBar Placeholder="These SearchBar contols"
+                           Style="{DynamicResource searchBarStyle}" />
+                <SearchBar Placeholder="are demonstrating"
+                           Style="{DynamicResource searchBarStyle}" />
+                <SearchBar Placeholder="dynamic styles."
+                           Style="{DynamicResource searchBarStyle}" />
+                <SearchBar Placeholder="However, this is not dynamic"
+                           Style="{StaticResource redSearchBarStyle}" />
+                <Button Text="Change Style"
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnButtonClicked" />
+
+            </StackLayout>
+            
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

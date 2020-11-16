@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TizenXamlCommonProfileApp.SecondPage">
+    <NavigationPage.TitleView>
+        <Label Text="SecondPage"
+               TextColor="#fff"
+               FontAttributes="Bold"
+               HorizontalOptions="End"
+               Margin="0,0,20,0" />
+    </NavigationPage.TitleView>
+    
+        <StackLayout BackgroundColor="Gray" Margin="20">
+        <Label Text="Data Biding"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="Blue"
+               Padding="20"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="30" />
+
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Button x:Name="btnBack"
+                        Text="Back page"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="Black"
+                        Clicked="btn_Clicked" />
+
+                <Button x:Name="btnNext"
+                        Text="Next page"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btn_Clicked" />
+            </StackLayout>
+            
+         <!-- Data Biding Ex -->
+        <StackLayout Orientation="Vertical" Margin="100">
+            <Label Text="When using Handler"
+                   x:Name="label01"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Green"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="50" />
+
+            <Label Text="Hello, Tizen!"
+                   x:Name="label02"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Green"
+                   Padding="20"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+
+            <Slider x:Name="slider01"
+                    ValueChanged="slider_ValueChanged" />
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Margin="10"
+                     BindingContext="{x:Reference Name=slider11}" >
+            <Label Text="When using BindingContext in Xaml"
+                   x:Name="label11"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Yellow"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   BindingContext="{x:Reference Name=slider11}"
+                   Padding="{Binding Path=Value}" />
+
+            <Label Text="Hello, OpenSupport!"
+                   x:Name="label12"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Yellow"
+                   Padding="20"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="{Binding Source={x:Reference Name=slider11} , Path=Value }" />
+
+            <Slider x:Name="slider11"
+                    ValueChanged="slider_ValueChanged" />
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Margin="10"
+                     BindingContext="{x:Reference Name=slider21}" >
+            <Label Text="When using BindingClass in C#"
+                   x:Name="label31"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Yellow"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                    />
+
+            <Label Text="Hello, FreeNanum App!"
+                   x:Name="label32"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Yellow"
+                   Padding="20"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                    />
+
+            <Slider x:Name="slider21"
+                    ValueChanged="slider_ValueChanged" />
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Margin="10"
+                     BindingContext="{x:Reference Name=slider21}" >
+            <Label Text="When using Binding Mode"
+                   x:Name="label41"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Yellow"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                    />
+
+            <Label Text="Hello, FreeNanum App!"
+                   x:Name="label42"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Yellow"
+                   Padding="20"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                    FontSize="{Binding Source={x:Reference Name=slider11} , Path=Value, Mode=TwoWay}"
+                    />
+
+            <Slider x:Name="slider31"
+                    ValueChanged="slider_ValueChanged" />
+        </StackLayout>
+
+    </StackLayout>
+    
+</ContentPage>

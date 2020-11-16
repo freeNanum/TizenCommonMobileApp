@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TizenXamlCommonProfileApp.FifthPage"
+             xmlns:local="clr-namespace:TizenXamlCommonProfileApp" >
+    <NavigationPage.TitleView>
+        <Label Text="Fifth Page"
+               TextColor="#fff"
+               FontAttributes="Bold"
+               HorizontalOptions="End"
+               Margin="0,0,20,0" />
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:CurrentTimeViewModel x:Key="currentTimeViewModel" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Gray" Margin="20">
+            <Label Text="MVVM-DataBiding"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="Blue"
+               Padding="20"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="30" />
+
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Button x:Name="btnBack"
+                        Text="Back page"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="Black"
+                        Clicked="btn_Clicked" />
+
+                <Button x:Name="btnNext"
+                        Text="Next page"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btn_Clicked" />
+            </StackLayout>
+
+        <!-- Body start -->
+            <StackLayout Margin="0,50,0,0">
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=dateTime}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center" />
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=dateTime.Year, StringFormat='The year is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center" />
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=dateTime.Month, StringFormat='The month is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center" />
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=dateTime.Day, StringFormat='The day is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center" />
+
+                <Label Text="{Binding Source={StaticResource currentTimeViewModel}, Path=dateTime.TimeOfDay, StringFormat='The time is {0}'}"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

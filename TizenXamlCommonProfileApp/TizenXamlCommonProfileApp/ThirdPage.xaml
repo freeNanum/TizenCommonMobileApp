@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TizenXamlCommonProfileApp.ThirdPage"
+             xmlns:local="clr-namespace:TizenXamlCommonProfileApp" 
+              >
+    <NavigationPage.TitleView>
+        <Label Text="ThirdPage"
+               TextColor="#fff"
+               FontAttributes="Bold"
+               HorizontalOptions="End"
+               Margin="0,0,20,0" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <Color x:Key="pageBackgroundColorRed">Red</Color>
+        <Color x:Key="pageBackgroundColorGreen">Green</Color>
+        <Color x:Key="pageBackgroundColorBlue">Blue</Color>
+
+        <x:Double x:Key="pagePaddingBig">20</x:Double>
+        <x:Double x:Key="pagePaddingNormal">10</x:Double>
+        <x:Double x:Key="pagePaddingSmall">5</x:Double>
+
+        <x:Double x:Key="pageFontsizeBig">30</x:Double>
+        <x:Double x:Key="pageFontsizeNormal">20</x:Double>
+        <x:Double x:Key="pageFontsizeSmall">10</x:Double>
+
+        <Color x:Key="pageTextColorWhite">white</Color>
+        <Color x:Key="pageTextColorBlack">Black</Color>
+        <Color x:Key="pageTextColorGray">Gray</Color>
+
+        <FontAttributes x:Key="pageFontAttributeBold">Bold</FontAttributes>
+        <FontAttributes x:Key=" pageFontAttributeItalic">Italic</FontAttributes>
+        <FontAttributes x:Key="pageFontAttributeBI">Bold, Italic</FontAttributes>
+        
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Gray" Margin="20">
+            <Label Text="Resource Dictionay"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="Blue"
+                   Padding="20"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="30" />
+
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Button x:Name="btnBack"
+                        Text="Back page"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="Black"
+                        Clicked="btn_Clicked" />
+
+                <Button x:Name="btnNext"
+                        Text="Next page"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btn_Clicked" />
+            </StackLayout>
+
+            <StackLayout BackgroundColor="#ff0" Margin="0,100,0,0">
+                <Label x:Name="labelHello"
+                       Text="Hello, Tizen!"
+                       HorizontalOptions="FillAndExpand"
+                       BackgroundColor="{DynamicResource Key=pageBackgroundColorRed}"
+                       FontSize="{DynamicResource Key=pageFontsizeBig}"
+                       Padding="{DynamicResource Key=pagePaddingBig}"
+                       TextColor="{DynamicResource Key=pageTextColorWhite}"
+                       HorizontalTextAlignment="Center" />
+<!--
+                <Label Text="Background Color" 
+                       Padding="{StaticResource Key=pagePaddingNormal}"
+                       TextColor="{x:StaticResource local:ResouceCS.TextColorGreenCS}"
+                       />
+ -->
+                <Label Text="Background Color" 
+                       Padding="{StaticResource Key=pagePaddingNormal}"
+                       />
+               
+                
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnBColorRed"
+                            Text="Red"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="btnBColorGreen"
+                            Text="Green"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="btnBColorBlue"
+                            Text="Blue"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+                </StackLayout>
+
+                <Label Text="Padding" />
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnPaddingBig"
+                            Text="Big"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="btnPaddingNormal"
+                            Text="Normal"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="btnPaddingSmall"
+                            Text="Small"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+                </StackLayout>
+
+                <Label Text="Font Size" />
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnFontSizeBig"
+                            Text="Big"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="btnFontSizeNormal"
+                            Text="Normal"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="btnFontSizeSmall"
+                            Text="Small"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+                </StackLayout>
+
+                <Label Text="Text Color" />
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="pageTColorWhite"
+                            Text="White"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="pageTColorBlack"
+                            Text="Black"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="pageTColorGray"
+                            Text="Gray"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+                </StackLayout>
+
+                <Label Text="Font Attribute" />
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="pageFontAttributeBold"
+                            Text="Bold"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="pageFontAttributeItalic"
+                            Text="Italic"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+
+                    <Button x:Name="pageFontAttributeBI"
+                            Text="Bold, Italic"
+                            HorizontalOptions="CenterAndExpand"
+                            Clicked="btn_Clicked" />
+                </StackLayout>
+
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
