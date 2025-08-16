@@ -1,5 +1,7 @@
 # TizenXamlCommonProfileApp
 
+[View in English](README.md)
+
 이 프로젝트는 모바일 애플리케이션 내에서 다양한 화면 간의 페이지 탐색 및 전환을 시연하기 위해 설계된 Xamarin.Forms 샘플 애플리케이션입니다. Xamarin.Forms, C# 및 XAML을 사용하여 다중 페이지 애플리케이션을 구현하려는 개발자를 위한 기초적인 예제 역할을 합니다.
 
 ## 프로젝트 개요
